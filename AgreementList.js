@@ -17,11 +17,6 @@ class AgreementList extends React.Component {
     render() {
 
         const { columns_title, agreement_list, lang, location_plant_list, file_list_idx, is_master, user_id, is_plus  } = this.state;
-        const sortable_columns = ['Anlaşma No', 'Anlaşma Oluşturma Tarihi', 'Müşteri Bilgisi', 'Proje Adı', 'İlk Sorumluluk Oranı', 'Belirlenen Sorumluluk Oranı', 'Parça Adeti', 'Anlaşma Onay Tarihi', 'Anlaşma Kayıt Tarihi'];
-        const sortable_columns_en = ['Agreement No', 'Date of Treaty Creation', 'Customer Information', 'Project Name', 'First Liability Rate', 'Determined Responsibility Rate', 'Number of Pieces', 'Agreement Approval Date', 'Agreement Record Date'];
-        const sortable_columns_idx = {
-            0: 'analysis_confirmation_status',1: 'agreement_status',2: 'agreement_number',3: 'agreement_created_date',4: 'customer_party_id',5: 'related_plants',6: 'product_group_id',7: 'project_name',8: 'first_responsibility_rate',9: 'determined_responsibility_rate',10: 'piece_quantity',11: 'analyis_present_file_id',12: 'agreement_confirmation_date',13: 'agreement_created_date',14: 'actions'
-        };
         const hidden_title_column_name_tr = ['İlk Sorumluluk Oranı', 'Belirlenen Sorumluluk Oranı', 'Parça Adeti', 'Anlaşma Onay Tarihi', 'Anlaşma Kayıt Tarihi'];
         const hidden_title_column_name_en = ['First Liability Rate', 'Determined Responsibility Ratio', 'Number of Pieces', 'Agreement Approval Date', 'Agreement Record Date'];
         const border_visible_column_name = ['Anlaşma Kayıt Tarihi', 'Agreement Record Date'];
@@ -182,12 +177,8 @@ class AgreementList extends React.Component {
                                 {agreement_detail.piece_quantity}
                             </td>
                             <td className="text-center" style={{fontSize: '11px'}}>
-                                {agreement_detail.agreement_confirmation_date instanceof Date
-                                    ? new Date(agreement_detail.agreement_confirmation_date).toISOString().slice(0, 16).replace('T', ' ')
-                                    : '--'}
                             </td>
                             <td className="text-center" style={{
-                                    ...hiddenColumn,
                                     fontSize: '11px',
                                     borderRight: is_plus === 0 ? "1px solid #949494" : ""
                                 }}>
