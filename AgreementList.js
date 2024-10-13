@@ -17,9 +17,6 @@ class AgreementList extends React.Component {
     render() {
 
         const { columns_title, agreement_list, lang, location_plant_list, file_list_idx, is_master, user_id, is_plus  } = this.state;
-        const hidden_title_column_name_tr = ['İlk Sorumluluk Oranı', 'Belirlenen Sorumluluk Oranı', 'Parça Adeti', 'Anlaşma Onay Tarihi', 'Anlaşma Kayıt Tarihi'];
-        const hidden_title_column_name_en = ['First Liability Rate', 'Determined Responsibility Ratio', 'Number of Pieces', 'Agreement Approval Date', 'Agreement Record Date'];
-        const border_visible_column_name = ['Anlaşma Kayıt Tarihi', 'Agreement Record Date'];
         const hiddenColumn = {
             display: is_plus === 1 ? "none" : "table-cell"
         };
