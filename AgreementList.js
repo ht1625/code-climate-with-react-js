@@ -17,9 +17,6 @@ class AgreementList extends React.Component {
     render() {
 
         const { columns_title, agreement_list, lang, location_plant_list, file_list_idx, is_master, user_id, is_plus  } = this.state;
-        const hiddenColumn = {
-            display: is_plus === 1 ? "none" : "table-cell"
-        };
 
         const handleAddClick = () => {
             this.setState(prevState => ({
