@@ -16,7 +16,7 @@ class AgreementList extends React.Component {
 
     render() {
 
-        const { columns_title, agreement_list, lang, location_plant_list, file_list_idx, is_master, user_id, is_plus  } = this.state;
+        const { columns_title, agreement_list, lang, location_plant_list, file_list_idx, is_master  } = this.state;
 
         const handleAddClick = () => {
             this.setState(prevState => ({
